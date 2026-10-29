@@ -77,9 +77,11 @@ function Home() {
         </button>
       </div>
 
-      {autores.map(autor => (
-        <Autor autor={autor} />
-      ))}
+      <footer>
+        {autores.map(autor => (
+          <Autor autor={autor} />
+        ))}
+      </footer>
     </>
   );
 }

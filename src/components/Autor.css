@@ -1,5 +1,6 @@
 .autor {
-  border: 1px solid #000;
+  border: 2px solid #ff3aaa;
+  border-radius: 12px 0 12px 0px;
   width: 150px;
   height: 75px;
   overflow: hidden;
@@ -8,17 +9,22 @@
   align-items: center;
   gap: 10px;
   margin: 12px;
+  background-color: #f9a7ff;
 }
 
 .autor img {
   width: 50%;
   height: 100%;
   object-fit: cover;
-  border: 1px solid #000;
   border-radius: 100%;
+  transition: all 0.4s ease;
 }
 
 .autor .nombre-autor {
   z-index: 1000;
   text-align: center;
+}
+
+.autor img:hover {
+  transform: rotate(360deg);
 }
