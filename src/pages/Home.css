@@ -8,6 +8,12 @@
   overflow: hidden;
 }
 
+h1 {
+  text-align: center;
+  background: #111;
+  color: #fff;
+}
+
 /* Ventana al 100% de ancho */
 .carousel-window-full {
   width: 100%;
@@ -49,11 +55,4 @@
 
 .btn-next {
   right: 30px;
-}
-
-footer {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  background-color: #1a1a1a;
 }
