@@ -76,12 +76,6 @@ function Home() {
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
       </div>
-
-      <footer>
-        {autores.map(autor => (
-          <Autor autor={autor} />
-        ))}
-      </footer>
     </>
   );
 }
