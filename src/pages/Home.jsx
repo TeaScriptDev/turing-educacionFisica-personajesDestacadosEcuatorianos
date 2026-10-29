@@ -1,5 +1,6 @@
 import ImagenSelection from "../components/ImagenSelection"
 import { personajes } from "../data/personajes"
+import './Home.css'
 
 function Home() {
   return (
