@@ -67,7 +67,9 @@ function Home() {
 
   return (
     <>
-      <h1>Los Deportistas más Destacados del Ecuador</h1>
+      <h1 className="home-title">
+        <span className="home-title-text">Los Deportistas más Destacados del Ecuador</span>
+      </h1>
       <div className="home-container" ref={containerRef}>
         {/* Iluminación ambiental fija en el centro del stage */}
         <div className="carousel-glow" />

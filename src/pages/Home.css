@@ -9,10 +9,67 @@
   overflow: hidden;
 }
 
-h1 {
+.home-title {
   text-align: center;
   background: #111;
+  padding: 24px 0 16px;
+  margin: 0;
+  position: relative;
+}
+
+.home-title-text {
+  display: inline-block;
   color: #fff;
+  font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  padding: 0 20px;
+  text-shadow:
+    0 0 2px #fff,
+    0 0 8px #ff3aaa,
+    0 0 18px #ff0055,
+    0 0 32px rgba(255, 0, 85, 0.6);
+  animation: titleFlicker 6s ease-in-out infinite;
+}
+
+.home-title-text::before,
+.home-title-text::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffcc00);
+  transform: translateY(-50%);
+}
+
+.home-title-text::before {
+  left: -40px;
+}
+
+.home-title-text::after {
+  right: -40px;
+  background: linear-gradient(90deg, #ffcc00, transparent);
+}
+
+@keyframes titleFlicker {
+
+  0%,
+  94%,
+  97%,
+  100% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 0.85;
+  }
+
+  96% {
+    opacity: 1;
+  }
 }
 
 /* Luz ambiental fija en el centro del stage (detrás de la tarjeta activa) */
@@ -23,12 +80,10 @@ h1 {
   width: 420px;
   height: 420px;
   transform: translate(-50%, -50%);
-  background: radial-gradient(
-    circle,
-    rgba(255, 0, 85, 0.55) 0%,
-    rgba(255, 58, 170, 0.25) 35%,
-    rgba(255, 0, 85, 0) 70%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 0, 85, 0.55) 0%,
+      rgba(255, 58, 170, 0.25) 35%,
+      rgba(255, 0, 85, 0) 70%);
   filter: blur(40px);
   z-index: 1;
   pointer-events: none;
@@ -36,8 +91,17 @@ h1 {
 }
 
 @keyframes glowPulse {
-  0%, 100% { opacity: 0.75; transform: translate(-50%, -50%) scale(1); }
-  50%      { opacity: 1;    transform: translate(-50%, -50%) scale(1.08); }
+
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
 }
 
 /* Ventana al 100% de ancho */
