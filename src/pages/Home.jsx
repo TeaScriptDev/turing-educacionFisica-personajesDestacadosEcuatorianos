@@ -1,17 +1,68 @@
-import ImagenSelection from "../components/ImagenSelection"
-import { personajes } from "../data/personajes"
-import './Home.css'
+import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import ImagenSelection from "../components/ImagenSelection";
+import { personajes } from "../data/personajes";
+import './Home.css';
 
 function Home() {
+  const cantidadPersonajes = personajes.length;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef(null);
+  const [offsetCenter, setOffsetCenter] = useState(0);
+
+  const itemWidth = 240;
+
+  // Calculamos para que el elemento activo quede exactamente a la mitad de la pantalla
+  useEffect(() => {
+    if (containerRef.current) {
+      const containerWidth = containerRef.current.offsetWidth;
+      setOffsetCenter((containerWidth / 2) - (itemWidth / 2));
+    }
+  }, []);
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % cantidadPersonajes);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + cantidadPersonajes) % cantidadPersonajes);
+  };
+
   return (
-    <>
-      <div className="seleccion">
-        {personajes.map(personaje => (
-          <ImagenSelection personaje={personaje} />
-        ))}
+    <div className="home-container" ref={containerRef}>
+      {/* Botón Izquierda flotante */}
+      <button className="carousel-btn btn-prev" onClick={handlePrev}>
+        <FontAwesomeIcon icon={faChevronLeft} />
+      </button>
+
+      {/* Carrusel al 100% que fluye libremente */}
+      <div className="carousel-window-full">
+        <motion.div
+          className="seleccion"
+          animate={{ x: offsetCenter - (currentIndex * itemWidth) }}
+          transition={{ type: "spring", stiffness: 250, damping: 25 }}
+        >
+          {personajes.map((personaje, index) => {
+            const isSelected = index === currentIndex;
+            return (
+              <ImagenSelection
+                key={personaje.id || index}
+                personaje={personaje}
+                className={isSelected ? "activo" : ""}
+              />
+            );
+          })}
+        </motion.div>
       </div>
-    </>
-  )
+
+      {/* Botón Derecha flotante */}
+      <button className="carousel-btn btn-next" onClick={handleNext}>
+        <FontAwesomeIcon icon={faChevronRight} />
+      </button>
+    </div>
+  );
 }
 
-export default Home
+export default Home;

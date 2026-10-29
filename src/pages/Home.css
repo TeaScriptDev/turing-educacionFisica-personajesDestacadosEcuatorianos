@@ -1,8 +1,52 @@
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  background: #111;
+  overflow: hidden;
+}
+
+/* Ventana al 100% de ancho */
+.carousel-window-full {
+  width: 100%;
+  overflow: visible;
+}
+
+/* Contenedor del carrusel */
 .seleccion {
   display: flex;
-  overflow: hidden;
   gap: 20px;
-  width: 100%;
-  padding: 20px;
-  background: #111;
+  align-items: center;
+}
+
+/* Botones flotantes tipo HUD de videojuego encima de todo */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ffcc00;
+  color: #ffcc00;
+  font-size: 1.8rem;
+  padding: 20px 25px;
+  cursor: pointer;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: #ffcc00;
+  color: #000;
+  box-shadow: 0 0 15px #ffcc00;
+}
+
+.btn-prev {
+  left: 30px;
+}
+
+.btn-next {
+  right: 30px;
 }
