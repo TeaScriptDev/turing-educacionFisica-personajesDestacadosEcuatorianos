@@ -19,7 +19,10 @@ export const personajes = [
             { etiqueta: "Panamericanos Lima 2019 (200 m)", valor: "Oro, 20.41 s" },
             { etiqueta: "Olimpiadas Londres 2012 (200 m)", valor: "Final, 7.º lugar" },
             { etiqueta: "Liga Diamante Lausana 2019", valor: "2.º lugar" }
-        ]
+        ],
+        imagen: {
+            portada: "/deportistas/alex-quinonez-portada.png",
+        }
     },
     {
         id: 2,
@@ -41,7 +44,10 @@ export const personajes = [
             { etiqueta: "Mejor marca 200 m (legal)", valor: "22.84 s" },
             { etiqueta: "Participaciones olímpicas", valor: "3" },
             { etiqueta: "Mejor resultado olímpico", valor: "Semifinal 100 m, Río 2016" }
-        ]
+        ],
+        imagen: {
+            portada: "/deportistas/angela-tenorio-portada.png",
+        }
     },
     {
         id: 3,
@@ -63,11 +69,14 @@ export const personajes = [
             { etiqueta: "Mejor marca 200 m", valor: "23.22 s (Quito 2017)" },
             { etiqueta: "Relevo 4x100 m (Tokio 2020)", valor: "43.69 s, récord nacional" },
             { etiqueta: "Participaciones olímpicas", valor: "2" }
-        ]
+        ],
+        imagen: {
+            portada: "/deportistas/narcisa-landazuri-portada.png",
+        }
     },
     {
         id: 4,
-        nombres: "Neisi",
+        nombres: "Neisi Patricia",
         apellidos: "Dajomes Barrera",
         biografia: "Pesista amazónica nacida en Puyo, hija de refugiados colombianos. En Tokio 2020 se convirtió en la primera mujer ecuatoriana en ganar una medalla olímpica y en París 2024 sumó un bronce. Tras cumplir una suspensión de 14 meses, volvió a competir en 2026.",
         deporte: "Levantamiento de pesas (halterofilia)",
@@ -85,7 +94,10 @@ export const personajes = [
             { etiqueta: "París 2024: arranque / envión", valor: "122 kg / 145 kg" },
             { etiqueta: "Participaciones olímpicas", valor: "3 (Río 2016: 7.ª)" },
             { etiqueta: "Medallas olímpicas", valor: "2 (1 oro, 1 bronce)" }
-        ]
+        ],
+        imagen: {
+            portada: "/deportistas/neisi-dajomes-portada.png",
+        }
     },
     {
         id: 5,
@@ -107,7 +119,10 @@ export const personajes = [
             { etiqueta: "Mundial 2018", valor: "Plata" },
             { etiqueta: "Mundial 2019", valor: "2 bronces" },
             { etiqueta: "Juegos Panamericanos Lima 2019", valor: "Bronce" }
-        ]
+        ],
+        imagen: {
+            portada: "/deportistas/tamara-salazar-portada.png",
+        }
     },
     {
         id: 6,
@@ -129,7 +144,10 @@ export const personajes = [
             { etiqueta: "París 2024: arranque / envión", valor: "123 kg / 160 kg" },
             { etiqueta: "Panamericano Caracas 2024", valor: "3 oros (118 / 151 / 269 kg)" },
             { etiqueta: "Panamericanos Santiago 2023", valor: "Plata (por 1 kg)" }
-        ]
+        ],
+        imagen: {
+            portada: "/deportistas/lisseth-ayovi-portada.png",
+        }
     },
     {
         id: 7,
@@ -151,7 +169,10 @@ export const personajes = [
             { etiqueta: "Medallas olímpicas", valor: "2 (1 oro, 1 plata)" },
             { etiqueta: "Mundial Budapest 2023 (35 km)", valor: "Plata" },
             { etiqueta: "Participaciones olímpicas", valor: "3 (Río 2016: 37.º; Tokio 2020: 12.º)" }
-        ]
+        ],
+        imagen: {
+            portada: "/deportistas/bryan-daniel-portada.png",
+        }
     },
     {
         id: 8,
@@ -173,7 +194,10 @@ export const personajes = [
             { etiqueta: "Giro de Italia", valor: "1.º en 2019, 3.º en 2025" },
             { etiqueta: "Victorias profesionales", valor: "Más de 20" },
             { etiqueta: "Equipo actual", valor: "EF Education–EasyPost" }
-        ]
+        ],
+        imagen: {
+            portada: "/deportistas/richard-carapaz-portada.png",
+        }
     },
     {
         id: 9,
@@ -195,7 +219,10 @@ export const personajes = [
             { etiqueta: "Mejor marca 35 km", valor: "2:48:27 (2022)" },
             { etiqueta: "Mejor marca 50 km", valor: "4:12:56 (2018)" },
             { etiqueta: "Tokio 2020 (20 km)", valor: "9.ª, 1:31:26" }
-        ]
+        ],
+        imagen: {
+            portada: "/deportistas/paola-perez-portada.png",
+        }
     },
     {
         id: 10,
@@ -217,7 +244,10 @@ export const personajes = [
             { etiqueta: "Récord nacional 400 m", valor: "52.24 s (2022)" },
             { etiqueta: "Relevo 4x100 m, Tokio 2020", valor: "43.69 s, récord nacional" },
             { etiqueta: "Sudamericano Sub-23 2022 (100 m)", valor: "Oro, 11.37 s" }
-        ]
+        ],
+        imagen: {
+            portada: "/deportistas/gabriela-suarez-portada.png",
+        }
     },
     {
         id: 13,
@@ -239,7 +269,10 @@ export const personajes = [
             { etiqueta: "Bolivarianos 2025", valor: "4 medallas (1 oro, 3 bronces)" },
             { etiqueta: "Bolivarianos 2022", valor: "Oro en dobles + 2 bronces" },
             { etiqueta: "Liga actual", valor: "Bundesliga (Alemania)" }
-        ]
+        ],
+        imagen: {
+            portada: "/deportistas/jorge-mino-portada.png",
+        }
     },
     {
         id: 14,
@@ -261,7 +294,10 @@ export const personajes = [
             { etiqueta: "Mundial 2019", valor: "Plata" },
             { etiqueta: "Panamericanos", valor: "Bronce 2007, plata 2011, plata 2019" },
             { etiqueta: "Categoría", valor: "81–91 kg" }
-        ]
+        ],
+        imagen: {
+            portada: "/deportistas/julio-castillo-portada.png",
+        }
     },
     {
         id: 15,
@@ -283,6 +319,9 @@ export const personajes = [
             { etiqueta: "Río 2016 (10 km)", valor: "9.º lugar" },
             { etiqueta: "Tokio 2020 (10 km)", valor: "11.º lugar, 2:01:30" },
             { etiqueta: "Londres 2012 (800 m libre)", valor: "29.ª en las series" }
-        ]
+        ],
+        imagen: {
+            portada: "/deportistas/samantha-arevalo-portada.png",
+        }
     }
 ];

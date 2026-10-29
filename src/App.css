@@ -3,3 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #111;
+    border-top: 2px solid #333;
+    flex-wrap: wrap;
+}
