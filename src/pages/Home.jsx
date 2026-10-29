@@ -41,7 +41,7 @@ function Home() {
         {/* Botón Izquierda flotante */}
         <button className="carousel-btn btn-prev" onClick={() => {
           handlePrev();
-          reproducirSonido("src/assets/sound-move-menu.wav");
+          reproducirSonido("src/assets/sound-move-menu.wav1");
         }}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
