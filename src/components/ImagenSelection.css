@@ -9,6 +9,7 @@
   overflow: hidden;
   opacity: 0.35;
   filter: grayscale(50%);
+  text-decoration: none;
 }
 
 /* Contrarrestar la inclinación en los textos para que se lean bien */
