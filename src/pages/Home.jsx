@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import ImagenSelection from "../components/ImagenSelection";
@@ -11,10 +12,10 @@ function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef(null);
   const [offsetCenter, setOffsetCenter] = useState(0);
+  const navigate = useNavigate();
 
   const itemWidth = 240;
 
-  // Calculamos para que el elemento activo quede exactamente a la mitad de la pantalla
   useEffect(() => {
     if (containerRef.current) {
       const containerWidth = containerRef.current.offsetWidth;
@@ -29,12 +30,12 @@ function Home() {
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % cantidadPersonajes);
-    reproducirSonido("src/assets/sound-move-menu.wav")
+    reproducirSonido("src/assets/sound-move-menu.wav");
   };
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev - 1 + cantidadPersonajes) % cantidadPersonajes);
-    reproducirSonido("src/assets/sound-move-menu.wav")
+    reproducirSonido("src/assets/sound-move-menu.wav");
   };
 
   useEffect(() => {
@@ -46,6 +47,15 @@ function Home() {
         case 'ArrowRight':
           handleNext();
           break;
+        case 'Enter':
+        case ' ':
+          e.preventDefault();
+          const personajeActual = personajes[currentIndex];
+
+          if (personajeActual) {
+            navigate(`/deportista/${personajeActual.id}`);
+          }
+          break;
         default:
           break;
       }
@@ -53,12 +63,15 @@ function Home() {
 
     window.addEventListener('keydown', manejarTeclado);
     return () => window.removeEventListener('keydown', manejarTeclado);
-  }, [cantidadPersonajes]);
+  }, [currentIndex, cantidadPersonajes, navigate]);
 
   return (
     <>
       <h1>Los Deportistas más Destacados del Ecuador</h1>
       <div className="home-container" ref={containerRef}>
+        {/* Iluminación ambiental fija en el centro del stage */}
+        <div className="carousel-glow" />
+
         {/* Botón Izquierda flotante */}
         <button className="carousel-btn btn-prev" onClick={() => handlePrev()}>
           <FontAwesomeIcon icon={faChevronLeft} />
@@ -88,7 +101,17 @@ function Home() {
         <button className="carousel-btn btn-next" onClick={() => handleNext()}>
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
-      </div >
+      </div>
+
+      {/* Indicador HUD de posición (rombos) */}
+      <div className="hud-dots">
+        {personajes.map((personaje, index) => (
+          <span
+            key={personaje.id || index}
+            className={`hud-dot ${index === currentIndex ? 'activo' : ''}`}
+          />
+        ))}
+      </div>
     </>
   );
 }

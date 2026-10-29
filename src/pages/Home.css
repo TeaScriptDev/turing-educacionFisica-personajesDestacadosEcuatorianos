@@ -4,6 +4,7 @@
   height: 80vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   background: #111;
   overflow: hidden;
 }
@@ -14,10 +15,37 @@ h1 {
   color: #fff;
 }
 
+/* Luz ambiental fija en el centro del stage (detrás de la tarjeta activa) */
+.carousel-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  height: 420px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 85, 0.55) 0%,
+    rgba(255, 58, 170, 0.25) 35%,
+    rgba(255, 0, 85, 0) 70%
+  );
+  filter: blur(40px);
+  z-index: 1;
+  pointer-events: none;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.75; transform: translate(-50%, -50%) scale(1); }
+  50%      { opacity: 1;    transform: translate(-50%, -50%) scale(1.08); }
+}
+
 /* Ventana al 100% de ancho */
 .carousel-window-full {
   width: 100%;
   overflow: visible;
+  position: relative;
+  z-index: 2;
 }
 
 /* Contenedor del carrusel */
@@ -55,4 +83,27 @@ h1 {
 
 .btn-next {
   right: 30px;
+}
+
+/* Indicador de posición en el carrusel (rombos) */
+.hud-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 0;
+  background: #111;
+}
+
+.hud-dot {
+  width: 8px;
+  height: 8px;
+  background: #444;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.hud-dot.activo {
+  background: #ff0055;
+  box-shadow: 0 0 8px #ff0055;
+  transform: rotate(45deg) scale(1.3);
 }
