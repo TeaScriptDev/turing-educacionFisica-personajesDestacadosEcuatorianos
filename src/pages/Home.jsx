@@ -5,6 +5,8 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import ImagenSelection from "../components/ImagenSelection";
 import { personajes } from "../data/personajes";
 import './Home.css';
+import Autor from '../components/Autor';
+import { autores } from '../data/autores';
 
 function Home() {
   const cantidadPersonajes = personajes.length;
@@ -74,6 +76,10 @@ function Home() {
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
       </div>
+
+      {autores.map(autor => (
+        <Autor autor={autor} />
+      ))}
     </>
   );
 }
