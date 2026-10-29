@@ -1,0 +1,38 @@
+.cardReveal {
+    display: flex;
+    border: 1px solid #000;
+    height: 250px;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cardReveal img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: width 0.4s ease;
+    flex-shrink: 0;
+}
+
+.cardReveal .textContent {
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.cardReveal:hover img {
+    width: 50%;
+}
+
+.cardReveal:hover .textContent {
+    width: 50%;
+    opacity: 1;
+    padding: 20px;
+}

@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import Deportista from "./pages/Deportista"
+import './App.css'
 
 function App() {
   return (

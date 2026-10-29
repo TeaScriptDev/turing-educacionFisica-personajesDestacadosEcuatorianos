@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import { personajes } from "../data/personajes";
+import SimplyRevealCard from "../components/SimplyRevealCard";
 
 function Deportista() {
     const { id } = useParams();
@@ -16,9 +17,13 @@ function Deportista() {
                     <span className="deporte">{personaje.deporte}</span>
                     <p className="biografia">{personaje.biografia}</p>
                 </div>
-                <div className=""></div>
             </div>
-            <div className="logros"></div>
+            <div className="logros">
+                <h2>Mis Logros</h2>
+                <div className="caja-logros">
+
+                </div>
+            </div>
             <div className="datos-personales"></div>
             <div className="stacks"></div>
         </>
