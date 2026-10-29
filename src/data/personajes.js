@@ -46,7 +46,7 @@ export const personajes = [
             { etiqueta: "Mejor resultado olímpico", valor: "Semifinal 100 m, Río 2016" }
         ],
         imagen: {
-            portada: "/deportistas/alex-quinonez-portada.png",
+            portada: "/deportistas/angela-tenorio-portada.png",
         }
     },
     {
@@ -71,12 +71,12 @@ export const personajes = [
             { etiqueta: "Participaciones olímpicas", valor: "2" }
         ],
         imagen: {
-            portada: "/deportistas/alex-quinonez-portada.png",
+            portada: "/deportistas/narcisa-landazuri-portada.png",
         }
     },
     {
         id: 4,
-        nombres: "Neisi",
+        nombres: "Neisi Patricia",
         apellidos: "Dajomes Barrera",
         biografia: "Pesista amazónica nacida en Puyo, hija de refugiados colombianos. En Tokio 2020 se convirtió en la primera mujer ecuatoriana en ganar una medalla olímpica y en París 2024 sumó un bronce. Tras cumplir una suspensión de 14 meses, volvió a competir en 2026.",
         deporte: "Levantamiento de pesas (halterofilia)",
@@ -96,7 +96,7 @@ export const personajes = [
             { etiqueta: "Medallas olímpicas", valor: "2 (1 oro, 1 bronce)" }
         ],
         imagen: {
-            portada: "/deportistas/alex-quinonez-portada.png",
+            portada: "/deportistas/neisi-dajomes-portada.png",
         }
     },
     {
@@ -121,7 +121,7 @@ export const personajes = [
             { etiqueta: "Juegos Panamericanos Lima 2019", valor: "Bronce" }
         ],
         imagen: {
-            portada: "/deportistas/alex-quinonez-portada.png",
+            portada: "/deportistas/tamara-salazar-portada.png",
         }
     },
     {
@@ -146,7 +146,7 @@ export const personajes = [
             { etiqueta: "Panamericanos Santiago 2023", valor: "Plata (por 1 kg)" }
         ],
         imagen: {
-            portada: "/deportistas/alex-quinonez-portada.png",
+            portada: "/deportistas/lisseth-ayovi-portada.png",
         }
     },
     {
@@ -171,7 +171,7 @@ export const personajes = [
             { etiqueta: "Participaciones olímpicas", valor: "3 (Río 2016: 37.º; Tokio 2020: 12.º)" }
         ],
         imagen: {
-            portada: "/deportistas/alex-quinonez-portada.png",
+            portada: "/deportistas/bryan-daniel-portada.png",
         }
     },
     {
@@ -196,7 +196,7 @@ export const personajes = [
             { etiqueta: "Equipo actual", valor: "EF Education–EasyPost" }
         ],
         imagen: {
-            portada: "/deportistas/alex-quinonez-portada.png",
+            portada: "/deportistas/richard-carapaz-portada.png",
         }
     },
     {
@@ -221,7 +221,7 @@ export const personajes = [
             { etiqueta: "Tokio 2020 (20 km)", valor: "9.ª, 1:31:26" }
         ],
         imagen: {
-            portada: "/deportistas/alex-quinonez-portada.png",
+            portada: "/deportistas/paola-perez-portada.png",
         }
     },
     {
@@ -246,7 +246,7 @@ export const personajes = [
             { etiqueta: "Sudamericano Sub-23 2022 (100 m)", valor: "Oro, 11.37 s" }
         ],
         imagen: {
-            portada: "/deportistas/alex-quinonez-portada.png",
+            portada: "/deportistas/gabriela-suarez-portada.png",
         }
     },
     {
@@ -271,7 +271,7 @@ export const personajes = [
             { etiqueta: "Liga actual", valor: "Bundesliga (Alemania)" }
         ],
         imagen: {
-            portada: "/deportistas/alex-quinonez-portada.png",
+            portada: "/deportistas/jorge-mino-portada.png",
         }
     },
     {
@@ -296,7 +296,7 @@ export const personajes = [
             { etiqueta: "Categoría", valor: "81–91 kg" }
         ],
         imagen: {
-            portada: "/deportistas/alex-quinonez-portada.png",
+            portada: "/deportistas/julio-castillo-portada.png",
         }
     },
     {
@@ -321,7 +321,7 @@ export const personajes = [
             { etiqueta: "Londres 2012 (800 m libre)", valor: "29.ª en las series" }
         ],
         imagen: {
-            portada: "/deportistas/alex-quinonez-portada.png",
+            portada: "/deportistas/samantha-arevalo-portada.png",
         }
     }
 ];

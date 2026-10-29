@@ -26,12 +26,13 @@
 /* Imagen ocupando el espacio completo sin cajas internas raras */
 .imagen-selection img {
   transform: skewX(15deg);
-  width: 120%;
-  height: 75%;
+  width: 140%;
+  height: 100%;
   object-fit: cover;
+  object-position: center top;
   position: absolute;
-  bottom: 0;
-  left: -10%;
+  top: 20%;
+  left: -12%;
   display: block;
 }
 
