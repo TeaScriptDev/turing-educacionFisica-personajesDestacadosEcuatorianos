@@ -1,4 +1,4 @@
-const personajes = [
+export const personajes = [
     {
         id: 1,
         nombres: "Alex",
