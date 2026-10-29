@@ -22,27 +22,45 @@ function Home() {
     }
   }, []);
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % cantidadPersonajes);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + cantidadPersonajes) % cantidadPersonajes);
-  };
-
   function reproducirSonido(urlSound) {
     const sonido = new Audio(urlSound);
     sonido.play().catch(() => { });
   }
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % cantidadPersonajes);
+    reproducirSonido("src/assets/sound-move-menu.wav")
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + cantidadPersonajes) % cantidadPersonajes);
+    reproducirSonido("src/assets/sound-move-menu.wav")
+  };
+
+  useEffect(() => {
+    const manejarTeclado = (e) => {
+      switch (e.key) {
+        case 'ArrowLeft':
+          handlePrev();
+          break;
+        case 'ArrowRight':
+          handleNext();
+          break;
+        default:
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', manejarTeclado);
+    return () => window.removeEventListener('keydown', manejarTeclado);
+  }, [cantidadPersonajes]);
+
   return (
     <>
       <h1>Los Deportistas más Destacados del Ecuador</h1>
       <div className="home-container" ref={containerRef}>
         {/* Botón Izquierda flotante */}
-        <button className="carousel-btn btn-prev" onClick={() => {
-          handlePrev();
-          reproducirSonido("src/assets/sound-move-menu.wav");
-        }}>
+        <button className="carousel-btn btn-prev" onClick={() => handlePrev()}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
 
@@ -67,13 +85,10 @@ function Home() {
         </div>
 
         {/* Botón Derecha flotante */}
-        <button className="carousel-btn btn-next" onClick={() => {
-          handleNext();
-          reproducirSonido("src/assets/sound-move-menu.wav");
-        }}>
+        <button className="carousel-btn btn-next" onClick={() => handleNext()}>
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
-      </div>
+      </div >
     </>
   );
 }
