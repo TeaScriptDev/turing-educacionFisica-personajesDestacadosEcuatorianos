@@ -31,37 +31,40 @@ function Home() {
   };
 
   return (
-    <div className="home-container" ref={containerRef}>
-      {/* Botón Izquierda flotante */}
-      <button className="carousel-btn btn-prev" onClick={handlePrev}>
-        <FontAwesomeIcon icon={faChevronLeft} />
-      </button>
+    <>
+      <h1>Los Deportistas más Destacados del Ecuador</h1>
+      <div className="home-container" ref={containerRef}>
+        {/* Botón Izquierda flotante */}
+        <button className="carousel-btn btn-prev" onClick={handlePrev}>
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
 
-      {/* Carrusel al 100% que fluye libremente */}
-      <div className="carousel-window-full">
-        <motion.div
-          className="seleccion"
-          animate={{ x: offsetCenter - (currentIndex * itemWidth) }}
-          transition={{ type: "spring", stiffness: 250, damping: 25 }}
-        >
-          {personajes.map((personaje, index) => {
-            const isSelected = index === currentIndex;
-            return (
-              <ImagenSelection
-                key={personaje.id || index}
-                personaje={personaje}
-                className={isSelected ? "activo" : ""}
-              />
-            );
-          })}
-        </motion.div>
+        {/* Carrusel al 100% que fluye libremente */}
+        <div className="carousel-window-full">
+          <motion.div
+            className="seleccion"
+            animate={{ x: offsetCenter - (currentIndex * itemWidth) }}
+            transition={{ type: "spring", stiffness: 250, damping: 25 }}
+          >
+            {personajes.map((personaje, index) => {
+              const isSelected = index === currentIndex;
+              return (
+                <ImagenSelection
+                  key={personaje.id || index}
+                  personaje={personaje}
+                  className={isSelected ? "activo" : ""}
+                />
+              );
+            })}
+          </motion.div>
+        </div>
+
+        {/* Botón Derecha flotante */}
+        <button className="carousel-btn btn-next" onClick={handleNext}>
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
       </div>
-
-      {/* Botón Derecha flotante */}
-      <button className="carousel-btn btn-next" onClick={handleNext}>
-        <FontAwesomeIcon icon={faChevronRight} />
-      </button>
-    </div>
+    </>
   );
 }
 
